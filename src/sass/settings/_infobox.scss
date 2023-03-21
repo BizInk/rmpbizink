@@ -1,0 +1,44 @@
+
+.info-box {
+  background-color:$white;
+    &:hover{
+      .btn-outline-navyblue.round-btn {       
+        background:$primary;
+        border-color:$primary;
+        color:$white;
+      }      
+    }
+    .btn-outline-navyblue.round-btn {
+      background-color:$white;
+      &:hover{
+        background:$primary;
+        border-color:$primary;
+      }
+    }
+    .info-description{
+      color:$dark;
+    }
+}
+
+.infobox-updated-section{
+  .infobox-warp{    
+    .info-box {
+      box-shadow: 0 0 30px rgba($dark, 0.3);    
+       img{
+        filter: brightness(0) saturate(100%) invert(46%) sepia(51%) saturate(2069%) hue-rotate(184deg) brightness(82%) contrast(80%);
+      }    
+      &:hover{
+        background-color:$light-blue;
+        img{
+          filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(152deg) brightness(103%) contrast(103%);
+        }
+        h6{
+          color:$white;
+        }
+        .info-description{
+          color:$white;
+        }
+      }
+    }
+  }
+}

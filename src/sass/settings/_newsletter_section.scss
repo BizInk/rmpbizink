@@ -1,0 +1,29 @@
+.newsletter-section {
+    .editor-design {
+        h2 {
+            color: $white;
+        }
+        p {
+            color: $white;
+        }
+    }
+    .gform_wrapper form .gform_body .gform_fields .gfield .ginput_container input[type=email]{       
+        background-color:$white;
+    }
+    .gform_wrapper form .gform_footer input[type=submit]{
+        background-color:$neutral-blue;
+        &:hover{
+            background-color:$primary;
+        }
+    }   
+    .gform_wrapper.gform_validation_errors.gravity-theme {
+        color:$white;
+    }    
+    .gform_wrapper.gravity-theme .gform_validation_errors {
+        background: transparent;
+        border: 0;
+    }  
+    .gForm .gform_wrapper.gravity-theme form .gform_body .gform_fields .gfield .ginput_container input[type=email] {
+        background:$white;
+    }  
+}

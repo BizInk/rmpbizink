@@ -1,0 +1,11 @@
+.call-to-action-section { 
+  @include background-set(center, cover, no-repeat);  
+  .full-width-wysiwyg {
+      position: relative;
+      margin-bottom: 40px;
+  }
+}
+.comman-callto-action {
+  max-width: 770px;
+  margin: 0 auto;
+}

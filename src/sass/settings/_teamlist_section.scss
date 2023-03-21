@@ -1,0 +1,46 @@
+.teamlist-section {
+    .team-member-wrap{    
+        a h4{
+            &:hover{
+                color:$primary;
+            }
+        }    
+        .member-details {
+            background-color:$white;
+            h4,p{
+                color:$dark;
+            }
+            h6{
+              color:$light-grey;
+            }
+            a{
+                color:$primary;
+                &:hover{
+                    color:$dark;
+                }
+            }
+        }
+    }
+}
+
+
+.member-details-section{
+    h3{
+        color:$primary;
+    }
+    ul.social-nav {      
+        li{                                                
+            a{  
+                img {
+                    filter: brightness(0) saturate(100%) invert(14%) sepia(29%) saturate(7096%) hue-rotate(194deg) brightness(95%) contrast(103%);
+                }
+                &:hover{
+                    img{
+                        filter: brightness(0) saturate(100%) invert(0%) sepia(97%) saturate(0%) hue-rotate(95deg) brightness(99%) contrast(98%);
+                    }
+                }                              
+            }
+        }
+    }  
+}
+

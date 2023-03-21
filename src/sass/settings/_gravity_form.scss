@@ -1,0 +1,81 @@
+.gForm{
+    .gform_confirmation_wrapper {
+      color: green;
+    }
+    .gform_wrapper{
+      form{
+        .gform_body{
+          .gform_fields{
+            .gfield{           
+              .ginput_container{
+                input[type="text"]{
+                  border: none;
+                  background-color: rgba($dark, 0.1);                
+                  &:focus{
+                    outline: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+  
+        .gform_footer{
+          .gform_button{
+            background-color: $primary;
+                    color: $white;	     
+            &:hover {
+              background-color:$dark;           
+            }      
+          }
+        }
+      }
+      .gform_validation_errors>h2 .gform-icon{
+        left: -35px;
+      }
+    }
+  }
+  
+  .get-in-touch{
+    .gForm{    
+      .gform_wrapper{
+          form{
+              .gform_body{
+                  .gform_fields{
+                      .gfield{             
+                          .ginput_container{
+                              input[type="text"],
+                              input[type="number"],
+                              input[type="date"],
+                              input[type="email"],
+                              input[type="tel"],
+                              textarea {
+                              border:1px solid rgba($dark, 0.1);
+                              background-color:transparent;    
+                              color:$dark;            
+                                  &:focus{
+                                      outline: none;
+                                  }
+                              }
+                              ::-webkit-input-placeholder {
+                                color:$dark;
+                              }
+                  
+                              :-moz-placeholder {
+                                color:$dark;
+                              }
+                  
+                              ::-moz-placeholder {
+                                color:$dark;                              
+                              }                
+                              :-ms-input-placeholder {
+                                color:$dark;
+                              }
+                          }
+                      }
+                  }
+              }               
+          }      
+      }
+    }
+  }

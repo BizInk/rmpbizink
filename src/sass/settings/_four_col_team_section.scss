@@ -1,0 +1,38 @@
+.four-col-team-section {  
+	.member-details{ 
+		a h6{
+			&:hover{
+				color:$primary;
+			}
+		}
+		.meta-desciption{
+			 i {
+			    color:$neutral-blue;
+			}
+			span, small{
+				color:$light-grey;
+			}			
+		}
+		a{
+			color: $primary;
+			&:hover{
+				color:$dark;
+			}
+		}
+	}
+}
+.blog-list-secion{
+	.member-details{	
+		.meta-desciption{
+			span{
+				color: $neutral-blue;
+			}
+		}
+		a{
+			color:$light-blue;
+			&:hover{
+				color:$dark;
+			}
+		}                                      
+	}
+}

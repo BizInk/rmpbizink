@@ -1,0 +1,37 @@
+
+.footer-wrap{
+	h6{
+		color:$white;
+	}
+	nav li a {		
+		color: $white;
+		&:hover{
+			color:$neutral-blue;			
+		}
+	}		
+}
+
+.footer-content{		
+	ul li {	
+		a {
+			color: $white;			
+			&:hover{
+				color:$neutral-blue;			
+			}
+		}
+	}	
+}
+.copyright-wrap{
+	.container {
+		border-top:1px solid $white;
+		p{
+			color:$white;
+		}
+		a{
+			color:$white;		
+			&:hover{
+				color:$primary;
+			}
+		}
+	}
+}

@@ -1,0 +1,86 @@
+.two-col-section {
+  .gForm {
+	.gform_wrapper {
+    background-color:$neutral-blue;
+		//form heading
+		.gform_heading {
+			.gform_title {				
+			}
+		}
+		
+		form {
+
+			//form body
+			.gform_body {
+				.gform_fields {
+					.gfield {
+
+						//label for form inputs
+						.gfield_label {}
+
+						//styles for form inputs
+						.ginput_container {
+
+							input[type="text"],
+							input[type="number"],
+							input[type="date"],
+							input[type="email"],
+							input[type="tel"],
+							textarea {
+								background-color:rgba($white, 0.30);
+								color:$white;
+								&:focus-visible {}
+							}
+
+							::-webkit-input-placeholder {
+								color:$white;
+							}
+
+							:-moz-placeholder {
+								/* Firefox 18- */
+								color:$white;
+							}
+
+							::-moz-placeholder {
+								/* Firefox 19+ */
+									color:$white;
+							}
+
+							:-ms-input-placeholder {
+								color:$white;
+							}
+
+							//styles for complex fields such as the name field
+							&.ginput_complex {
+								span {
+									label {}
+								}
+							}
+
+							.gfield_radio {}
+
+							.gfield_checkbox {}
+
+							.gfield_description {}
+						}						
+					}
+				}
+			}
+
+			//form footer
+			.gform_footer {
+				input[type="submit"] {
+					border-color:$white;
+					background-color:$white;
+					color:$neutral-blue;
+					&:hover{
+						background-color:$dark;
+						border-color:$dark;
+						color:$white;
+					}
+				}
+			}
+		}
+	}
+  }
+}

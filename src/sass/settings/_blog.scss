@@ -1,0 +1,23 @@
+
+.filter-wrap {
+    span{                     
+        background: $primary;           
+        color: $white;
+    }
+    ul {
+        li {               
+            &:hover {
+                background: $primary;
+                color: $white;
+            }
+            &.active{
+                background: $primary;
+                color: $white;
+                @media(max-width:767px) {            
+                    background:transparent; 
+                    color: $primary;
+                }
+            }
+        }
+    }        
+}
