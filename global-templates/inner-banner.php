@@ -36,7 +36,7 @@ if( is_tax() ){
 // If is search results page
 if( is_search() ){
 
-	$banner_title = !empty($_GET['s']) ? 'Search Results for /"'. $_GET['s'] . '/"' : 'Search Results';
+	$banner_title = !empty($_GET['s']) ? 'Search Results for '. $_GET['s'] : 'Search Results';
 	$banner_content = '';
 }
 
