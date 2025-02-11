@@ -288,21 +288,22 @@ function wpdocs_custom_init() {
 }
 
 // Adding option to select gravity form in ACF
-add_filter( 'acf/load_field/name=gravity_forms', 'luca_acf_populate_gf_forms_ids' );
-function luca_acf_populate_gf_forms_ids( $field ) {
-	if ( class_exists( 'GFFormsModel' ) ) {
-		$choices = [];
+if(!function_exists('luca_acf_populate_gf_forms_ids')){
+	add_filter( 'acf/load_field/name=gravity_forms', 'luca_acf_populate_gf_forms_ids' );
+	function luca_acf_populate_gf_forms_ids( $field ) {
+		if ( class_exists( 'GFFormsModel' ) ) {
+			$choices = [];
 
-		foreach ( \GFFormsModel::get_forms() as $form ) {
-			$choices[ $form->id ] = $form->title;
+			foreach ( \GFFormsModel::get_forms() as $form ) {
+				$choices[ $form->id ] = $form->title;
+			}
+
+			$field['choices'] = $choices;
 		}
 
-		$field['choices'] = $choices;
+		return $field;
 	}
-
-	return $field;
 }
-
 // Function to show star rating
 function bage_star_rating($rating){
 	if( $rating > 0 && $rating <= 5 ){
