@@ -17019,6 +17019,26 @@ footer {
   }
 }
 
+.footer-content .social-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-content .social-nav ul li {
+  margin: 0 5px;
+}
+.footer-content .social-nav ul li a {
+  padding: 5px;
+  font-size: 15px;
+  text-decoration: none;
+}
+.footer-content .social-nav ul li a i {
+  font-size: 27px;
+}
+.footer-content .social-nav ul li a svg {
+  width: 25px;
+  height: 27px;
+}
+
 .copyright-wrap .container {
   padding: 25px 0px;
   display: flex;

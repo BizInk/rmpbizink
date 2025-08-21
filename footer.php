@@ -18,14 +18,19 @@ $general_settings = get_field('general_settings', 'options');
 $general_class = '';
 
 if( in_array('Add Common Padding', $general_settings) ){
-
 	$general_class .= ' comman-padding';
 }
 
 if( in_array('Add Common Margin', $general_settings) ){
-
 	$general_class .= ' comman-margin';
 }
+
+$facebook = get_field('facebook', 'options'); 
+$twitter = get_field('twitter', 'options'); 
+$linkedin = get_field('linkedin', 'options');
+$instagram = get_field('instagram', 'options');
+$threads = get_field('threads', 'options');
+$youtube = get_field('youtube', 'options');
 
 $logo_title = get_field('logo_title', 'options');
 $logo_description = get_field('logo_description', 'options');
@@ -74,16 +79,11 @@ $gravity_forms = get_field('gravity_forms', 'options');
 	<div class="full-width-wysiwyg text-center">
 		<div class="container" style="background-image:url(<?php echo $newsletter_background_image; ?>);">
 			<div class="editor-design">
-
 				<?php if( !empty($newsletter_title) ){ ?>
-					
 					<h2><?= $newsletter_title; ?></h2>
 				<?php }
-
 				echo $newsletter_content;
-
 				if( !empty($gravity_forms) ){
-					
 					echo do_shortcode('[gravityform id="'. $gravity_forms .'" title="false" ajax="true"]');
 				} ?>
 			</div>
@@ -133,27 +133,39 @@ $company_email = get_field('company_email', 'options');
 					</nav> 
 				</div>	
 				<div class="footer-content">
-
 					<?php if( !empty($social_title) ){ ?>
-						
 						<h6><?= $social_title; ?></h6>
-					<?php }
-					if( have_rows('social_icons', 'options') ){ ?>
-					
-						<ul>
-							<?php while( have_rows('social_icons', 'options') ){
-								the_row();
-
-								$social_icon = get_sub_field('social_icon');
-								$social_media_url = get_sub_field('social_media_url');
-
-								if( !empty($social_icon) && !empty($social_media_url) ){ ?>
-								
-									<li><a href="<?= $social_media_url['url']; ?>" target="_blank"><?= $social_icon; ?></a></li>
-								<?php }
-							} ?>				
-						</ul>
 					<?php } ?>
+					<nav class="social-nav">
+					<ul>
+						<?php if( !empty($facebook) ){ ?>
+							<li><a href="<?php echo $facebook; ?>" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+						<?php }
+
+						if( !empty($twitter) ){ ?>
+							<li>
+								<a href="<?= $twitter; ?>" target="_blank">
+									<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+										<path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"></path>
+									</svg>
+									<!-- <i class="fa fa-twitter" aria-hidden="true"></i> -->
+								</a>
+							</li>
+						<?php }
+
+						if( !empty($linkedin) ){ ?>
+							<li><a href="<?php echo $linkedin; ?>" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+						<?php }
+						
+						if( !empty($instagram) ){ ?>	
+							<li><a href="<?= $instagram; ?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						<?php } 
+
+						if( !empty($youtube) ){ ?>
+							<li><a href="<?= $youtube; ?>" target="_blank"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+						<?php } ?>
+					</ul>
+					</nav>
 				</div>
 			</div>
 			<div class="col-md-3 col-lg-3">
